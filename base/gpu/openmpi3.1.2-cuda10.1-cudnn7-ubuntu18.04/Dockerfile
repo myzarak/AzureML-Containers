@@ -91,3 +91,7 @@ RUN mkdir /tmp/openmpi && \
     make install && \
     ldconfig && \
     rm -rf /tmp/openmpi
+
+RUN pip install tensorflow-gpu<1.15
+RUN pip install --no-cache-dir horovod
+RUN pip install mpi4py
